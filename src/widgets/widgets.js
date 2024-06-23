@@ -17,6 +17,7 @@ import customapi from "./customapi/widget";
 import deluge from "./deluge/widget";
 import develancacheui from "./develancacheui/widget";
 import diskstation from "./diskstation/widget";
+import dockerapi from "./dockerapi/widget";
 import downloadstation from "./downloadstation/widget";
 import emby from "./emby/widget";
 import esphome from "./esphome/widget";
@@ -146,6 +147,7 @@ const widgets = {
   develancacheui,
   diskstation,
   downloadstation,
+  dockerapi,
   emby,
   esphome,
   evcc,
