@@ -78,6 +78,7 @@
         "healthy": "Healthy",
         "starting": "Starting",
         "unhealthy": "Unhealthy",
+        "total": "Total",
         "not_found": "Not Found",
         "exited": "Exited",
         "partial": "Partial"

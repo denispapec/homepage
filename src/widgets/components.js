@@ -22,6 +22,7 @@ const components = {
   diskstation: dynamic(() => import("./diskstation/component")),
   downloadstation: dynamic(() => import("./downloadstation/component")),
   docker: dynamic(() => import("./docker/component")),
+  dockerapi: dynamic(() => import("./dockerapi/component")),
   kubernetes: dynamic(() => import("./kubernetes/component")),
   emby: dynamic(() => import("./emby/component")),
   esphome: dynamic(() => import("./esphome/component")),
