@@ -553,6 +553,14 @@
         "networkRate": "Bitrate",
         "clientIP": "Client"
     },
+    "headscale": {
+        "address": "Address",
+        "users": "Users",
+        "online": "Online",
+        "total": "Total",
+        "last_seen": "Last Seen",
+        "never": "Never"
+    },
     "scrutiny": {
         "passed": "Passed",
         "failed": "Failed",
