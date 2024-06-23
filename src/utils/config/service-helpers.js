@@ -519,6 +519,9 @@ export function cleanServiceGroups(groups) {
           if (server) cleanedService.widget.server = server;
           if (container) cleanedService.widget.container = container;
         }
+        if (type === "dockerapi") {
+          if (server) cleanedService.widget.server = server;
+        }
         if (type === "unifi") {
           if (site) cleanedService.widget.site = site;
         }
