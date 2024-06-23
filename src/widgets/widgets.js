@@ -121,6 +121,8 @@ import tdarr from "./tdarr/widget";
 import technitium from "./technitium/widget";
 import traefik from "./traefik/widget";
 import transmission from "./transmission/widget";
+import tubearchivist from "./tubearchivist/widget";
+import tvheadend from "./tvheadend/widget";
 import truenas from "./truenas/widget";
 import tubearchivist from "./tubearchivist/widget";
 import unifi from "./unifi/widget";
@@ -264,6 +266,7 @@ const widgets = {
   transmission,
   tubearchivist,
   truenas,
+  tvheadend,
   unifi,
   unifi_console: unifi,
   unmanic,
