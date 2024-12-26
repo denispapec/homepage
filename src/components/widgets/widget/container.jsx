@@ -19,7 +19,7 @@ export function getAllClasses(options, additionalClassNames = "") {
 
     return classNames(
       "flex flex-col justify-center",
-      "mt-2 m:mb-0 rounded-md shadow-md shadow-theme-900/10 dark:shadow-theme-900/20 bg-theme-100/20 dark:bg-white/5 p-2 pl-3 pr-3",
+      "mt-2 m:mb-0 rounded-md shadow-md shadow-theme-900/10 dark:shadow-theme-900/20 bg-theme-100/20 dark:bg-white/5 pl-3 pr-3",
       additionalClassNames,
     );
   }
