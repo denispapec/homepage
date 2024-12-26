@@ -9,7 +9,7 @@ import Network from "./network";
 import Uptime from "./uptime";
 
 export default function Resources({ options }) {
-  const { expanded, units, diskUnits, tempmin, tempmax } = options;
+  const { expanded, units, diskUnits, tempmin, tempmax, slimmed } = options;
   let { refresh } = options;
   if (!refresh) refresh = 1500;
   refresh = Math.max(refresh, 1000);
@@ -21,7 +21,14 @@ export default function Resources({ options }) {
           {options.memory && <Memory expanded={expanded} refresh={refresh} />}
           {Array.isArray(options.disk)
             ? options.disk.map((disk) => (
-                <Disk key={disk} options={{ disk }} expanded={expanded} diskUnits={diskUnits} refresh={refresh} />
+                <Disk
+                  key={disk}
+                  options={{ disk }}
+                  expanded={expanded}
+                  diskUnits={diskUnits}
+                  refresh={refresh}
+                  slimmed={slimmed}
+                />
               ))
             : options.disk && <Disk options={options} expanded={expanded} diskUnits={diskUnits} refresh={refresh} />}
           {options.network && <Network options={options} refresh={refresh} />}
