@@ -11,6 +11,7 @@ export default function Resource({
   expanded = false,
   additionalClassNames = "",
   wide = false,
+  slimmed = false,
 }) {
   const Icon = icon;
 
@@ -26,7 +27,7 @@ export default function Resource({
       >
         <div className="text-theme-800 dark:text-theme-200 text-xs flex flex-row justify-between">
           <div className="pl-0.5">{value}</div>
-          <div className="pr-1">{label}</div>
+          <div className={`pr-1 ${slimmed ? "pl-1" : ""}`}>{slimmed ? ` / ${expandedValue}` : label}</div>
         </div>
         {expanded && (
           <div className="text-theme-800 dark:text-theme-200 text-xs flex flex-row justify-between">
