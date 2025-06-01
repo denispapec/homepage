@@ -730,6 +730,12 @@
         "numfiles": "Files",
         "numshares": "Shared Items"
     },
+    "tvheadend": {
+        "users": "Users",
+        "inputs": "Inputs",
+        "channels": "Channels",
+        "dvr": "DVR"
+    },
     "kopia": {
         "status": "Status",
         "size": "Size",
