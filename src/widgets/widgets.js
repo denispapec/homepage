@@ -128,6 +128,7 @@ import transmission from "./transmission/widget";
 import trilium from "./trilium/widget";
 import truenas from "./truenas/widget";
 import tubearchivist from "./tubearchivist/widget";
+import tvheadend from "./tvheadend/widget";
 import unifi from "./unifi/widget";
 import unmanic from "./unmanic/widget";
 import uptimekuma from "./uptimekuma/widget";
@@ -275,6 +276,7 @@ const widgets = {
   trilium,
   tubearchivist,
   truenas,
+  tvheadend,
   unifi,
   unifi_console: unifi,
   unmanic,

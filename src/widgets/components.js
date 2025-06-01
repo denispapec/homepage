@@ -137,6 +137,7 @@ const components = {
   trilium: dynamic(() => import("./trilium/component")),
   tubearchivist: dynamic(() => import("./tubearchivist/component")),
   truenas: dynamic(() => import("./truenas/component")),
+  tvheadend: dynamic(() => import("./tvheadend/component")),
   unifi: dynamic(() => import("./unifi/component")),
   unmanic: dynamic(() => import("./unmanic/component")),
   uptimekuma: dynamic(() => import("./uptimekuma/component")),
