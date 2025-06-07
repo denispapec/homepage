@@ -115,6 +115,9 @@ export async function constructedServiceFromResource(resource) {
   if (resource.metadata.annotations[`${ANNOTATION_BASE}/statusStyle`]) {
     constructedService.statusStyle = resource.metadata.annotations[`${ANNOTATION_BASE}/statusStyle`];
   }
+  if (resource.metadata.annotations[`${ANNOTATION_BASE}/hideWarningStatus`]) {
+    constructedService.hideWarningStatus = resource.metadata.annotations[`${ANNOTATION_BASE}/hideWarningStatus`];
+  }
 
   Object.keys(resource.metadata.annotations).forEach((annotation) => {
     if (annotation.startsWith(ANNOTATION_WIDGET_BASE)) {

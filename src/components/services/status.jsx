@@ -1,7 +1,12 @@
 import { useTranslation } from "next-i18next";
+import { useContext } from "react";
 import useSWR from "swr";
 
-export default function Status({ service, style }) {
+import { ColorContext } from "../../utils/contexts/color";
+
+export default function Status({ service, style, hideWarningStatus = false }) {
+  const { color } = useContext(ColorContext);
+
   const { t } = useTranslation();
 
   const { data, error } = useSWR(`/api/docker/status/${service.container}/${service.server || ""}`);
@@ -45,6 +50,10 @@ export default function Status({ service, style }) {
   if (style === "dot") {
     colorClass = colorClass.replace(/text-/g, "bg-").replace(/\/\d\d/g, "");
     backgroundClass = "p-4 hover:bg-theme-500/10 dark:hover:bg-theme-900/20";
+  }
+
+  if (hideWarningStatus) {
+    colorClass = colorClass.replaceAll(/orange/g, color);
   }
 
   return (
