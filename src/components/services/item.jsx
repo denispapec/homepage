@@ -18,6 +18,8 @@ export default function Item({ service, groupName, useEqualHeights }) {
   const { settings } = useContext(SettingsContext);
   const showStats = service.showStats === false ? false : settings.showStats;
   const statusStyle = service.statusStyle !== undefined ? service.statusStyle : settings.statusStyle;
+  const hideWarningStatus =
+    service.hideWarningStatus !== undefined ? service.hideWarningStatus : settings.hideWarningStatus;
   const [statsOpen, setStatsOpen] = useState(service.showStats);
   const [statsClosing, setStatsClosing] = useState(false);
 
@@ -109,7 +111,7 @@ export default function Item({ service, groupName, useEqualHeights }) {
                 onClick={() => (statsOpen ? closeStats() : setStatsOpen(true))}
                 className="shrink-0 flex items-center justify-center cursor-pointer service-tag service-container-stats"
               >
-                <Status service={service} style={statusStyle} />
+                <Status service={service} style={statusStyle} hideWarningStatus={hideWarningStatus} />
                 <span className="sr-only">View container stats</span>
               </button>
             )}
